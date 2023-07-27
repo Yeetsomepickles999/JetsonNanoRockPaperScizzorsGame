@@ -2,7 +2,7 @@ Certainly! Here's the updated README file with the information stating that the 
 
 # Rock Paper Scissors Game using Modified ImageNet and ResNet-18
 
-![Rock Paper Scissors](https://example.com/path/to/your/image.png)
+![Rock Paper Scissors](https://www.nvidia.com/content/dam/en-zz/Solutions/intelligent-machines/embedded-systems/jetson-nano/nvidia-jetson-nano-og.jpg)
 
 Welcome to the Rock Paper Scissors Game GitHub project! This project utilizes a modified version of the ImageNet dataset and the ResNet-18 model to create a fun and interactive game of Rock Paper Scissors using your camera. The game allows you to play against the computer, which uses the power of deep learning to predict your hand gesture in real-time.
 
