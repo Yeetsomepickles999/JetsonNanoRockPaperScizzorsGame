@@ -1,6 +1,8 @@
+Certainly! Here's the updated README file with the information stating that the project is unlicensed:
+
 # Rock Paper Scissors Game using Modified ImageNet and ResNet-18
 
-![JetsonNano]([https://example.com/path/to/your/image.png](https://www.nvidia.com/content/dam/en-zz/Solutions/intelligent-machines/embedded-systems/jetson-nano/nvidia-jetson-nano-og.jpg))
+![Rock Paper Scissors](https://example.com/path/to/your/image.png)
 
 Welcome to the Rock Paper Scissors Game GitHub project! This project utilizes a modified version of the ImageNet dataset and the ResNet-18 model to create a fun and interactive game of Rock Paper Scissors using your camera. The game allows you to play against the computer, which uses the power of deep learning to predict your hand gesture in real-time.
 
@@ -12,7 +14,6 @@ Welcome to the Rock Paper Scissors Game GitHub project! This project utilizes a 
 - [Usage](#usage)
 - [How it Works](#how-it-works)
 - [Contributing](#contributing)
-- [License](#license)
 - [GitHub Repository](#github-repository)
 - [YouTube Demo](#youtube-demo)
 
@@ -44,6 +45,10 @@ git clone https://github.com/Yeetsomepickles999/JetsonNanoRockPaperScizzorsGame.
 ```bash
 cd JetsonNanoRockPaperScizzorsGame
 ```
+
+3. Replace `imagenet.py` with the provided version:
+
+Replace the `imagenet.py` file in the `jetson-inference/python/examples` directory with the provided version from this repository. This modified `imagenet.py` file contains the necessary modifications to fit the custom images for Rock, Paper, and Scissors gestures.
 
 4. Install Jetson Inference and Jetson Utils libraries:
 
@@ -82,13 +87,19 @@ Please note that these libraries are specifically designed for NVIDIA Jetson pla
 
 1. Ensure your camera is connected and accessible by the system.
 
-2. Run the Rock Paper Scissors game:
+2. Navigate to the `jetson-inference/python/examples` directory:
+
+```bash
+cd jetson-inference/python/examples
+```
+
+3. Run the Rock Paper Scissors game:
 
 ```bash
 python my-recognition.py
 ```
 
-3. Follow the on-screen instructions to play the game. When prompted, show your hand gesture (rock, paper, or scissors) in front of the camera, and the computer will make its choice simultaneously. The game will then determine the winner and display the result.
+4. Follow the on-screen instructions to play the game. When prompted, show your hand gesture (rock, paper, or scissors) in front of the camera, and the computer will make its choice simultaneously. The game will then determine the winner and display the result.
 
 ## How it Works
 
@@ -111,10 +122,6 @@ Contributions to this project are more than welcome! If you have ideas for impro
 4. Push your changes to your forked repository.
 
 5. Open a pull request to this repository, explaining your changes and the benefits they provide.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the code for both commercial and non-commercial purposes.
 
 ## GitHub Repository
 
