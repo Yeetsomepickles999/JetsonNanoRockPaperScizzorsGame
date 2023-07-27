@@ -1,22 +1,129 @@
-# JetsonNanoRockPaperScizzorsGame
-Age Predictor Model
+# Rock Paper Scissors Game using Modified ImageNet and ResNet-18
 
-This model is used to predict peoples ages based on their face. It is trained on an imagenet Resnet-18 model using transfer learning. The idea is that if the model overpredicts your age, you might have some sort of skin problems.
+[Jetson Nano](https://www.nvidia.com/content/dam/en-zz/Solutions/intelligent-machines/embedded-systems/jetson-nano/nvidia-jetson-nano-og.jpg)
 
-![A computer analyzes a face.](https://imgur.com/HeyVfsW)
+Welcome to the Rock Paper Scissors Game GitHub project! This project utilizes a modified version of the ImageNet dataset and the ResNet-18 model to create a fun and interactive game of Rock Paper Scissors using your camera. The game allows you to play against the computer, which uses the power of deep learning to predict your hand gesture in real-time.
 
-## The Algorithm
-The algorithim is used by recording a video on a Logitech webcam - supported by Jetson nano. It uses a 2GB Jetson Nano, and so it uses it a preflashed SD card flashed from the NVIDIA webpage. It uses a facenet to find a persons face in the image, then it crops the image to just hold the face. It then sends the face to the transfer learning model. The transfer model then predicts your age. It will try to guess your age to the best of its abilities. Then it will print out the age is it is confident. It is up to the user to interepret the information.
-Note: I ran this model on a realivly low epoch with information that was askew. The pretrained model is quite inacurrate.
-## Running this project
+## Table of Contents
 
-1. Connect to your Jetson Nano via VSCODE. 
-2. Connect your Webcam (preferably logitech)
-3. Ensure that you have the proper things installed. The Renet18.onnx and all others like that - the ones that say resnet18.onnx and the final_project2.py. Also, esure that you have the labels.txt file.
-4. Since using teh preflashed SD card, there sould be a docker container. This is accesable by implementing this code. Change directories into jetson-inference/build/aarch64/bin. - use this code if your in the home.$ cd jetson-inference/build/aarch64/bin
-5. Then run this code -$ ./docker/run.sh --volume /home/(username)/final-projects:/final-projects        - the code moves the final-projects folder into the docker container so that the line from PIL import Image runs without an error.
-6a. The run the following code - $ python3 final_project2.py --network=facenet (webcam name here)
-6b. You should see a video popup of your face. Note how it is not a smooth stream of images. It should be a headshot of you and your face, and there should be some blakc space.
-7. The model is up and running, and so you should just put your face in clear view infront of the camera and watch as it tries to predict your age!
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [How it Works](#how-it-works)
+- [Contributing](#contributing)
+- [License](#license)
+- [GitHub Repository](#github-repository)
+- [YouTube Demo](#youtube-demo)
 
-[View a video explanation here](video link)
+## Introduction
+
+The Rock Paper Scissors Game is a computer vision-based project that demonstrates the capabilities of deep learning models for hand gesture recognition. The ImageNet dataset has been modified and augmented with images of Rock, Paper, and Scissors hand gestures. These modified images were used to train the ResNet-18 model to recognize the specific gestures required for the game.
+
+## Requirements
+
+To run this project, you will need the following dependencies:
+
+- Python 3.x
+- PyTorch
+- OpenCV
+- NumPy
+
+You will also need to install the `jetson_inference` and `jetson_utils` libraries for the functionality of `my-recognition.py`. These libraries provide the necessary tools for running the deep learning model on NVIDIA Jetson platforms.
+
+## Installation
+
+1. Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/Yeetsomepickles999/JetsonNanoRockPaperScizzorsGame.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd JetsonNanoRockPaperScizzorsGame
+```
+
+4. Install Jetson Inference and Jetson Utils libraries:
+
+For NVIDIA Jetson platforms, these libraries are essential for running the deep learning model and utilizing camera functionalities. Follow the steps below to install them:
+
+- **Jetson Inference**:
+
+```bash
+git clone https://github.com/dusty-nv/jetson-inference
+cd jetson-inference
+git submodule update --init
+mkdir build
+cd build
+cmake ../
+make
+sudo make install
+sudo ldconfig
+```
+
+- **Jetson Utils**:
+
+```bash
+git clone https://github.com/dusty-nv/jetson-utils
+cd jetson-utils
+mkdir build
+cd build
+cmake ../
+make
+sudo make install
+sudo ldconfig
+```
+
+Please note that these libraries are specifically designed for NVIDIA Jetson platforms. If you are using a different system, you may need to adapt the installation instructions accordingly.
+
+## Usage
+
+1. Ensure your camera is connected and accessible by the system.
+
+2. Run the Rock Paper Scissors game:
+
+```bash
+python my-recognition.py
+```
+
+3. Follow the on-screen instructions to play the game. When prompted, show your hand gesture (rock, paper, or scissors) in front of the camera, and the computer will make its choice simultaneously. The game will then determine the winner and display the result.
+
+## How it Works
+
+The Rock Paper Scissors Game uses the modified ImageNet dataset, which includes images of Rock, Paper, and Scissors hand gestures. These images were used to fine-tune the ResNet-18 deep learning model specifically for the Rock Paper Scissors game.
+
+During the game, the camera captures real-time video input. The program processes each frame, detects the hand gesture using the fine-tuned ResNet-18 model, and predicts the corresponding gesture.
+
+The game logic then determines the winner based on the traditional Rock Paper Scissors rules.
+
+## Contributing
+
+Contributions to this project are more than welcome! If you have ideas for improvements or new features, please follow these steps:
+
+1. Fork the repository.
+
+2. Create a new branch for your feature or improvement.
+
+3. Make your changes and commit them with descriptive commit messages.
+
+4. Push your changes to your forked repository.
+
+5. Open a pull request to this repository, explaining your changes and the benefits they provide.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the code for both commercial and non-commercial purposes.
+
+## GitHub Repository
+
+Find the project on GitHub: [https://github.com/Yeetsomepickles999/JetsonNanoRockPaperScizzorsGame](https://github.com/Yeetsomepickles999/JetsonNanoRockPaperScizzorsGame)
+
+## YouTube Demo
+
+Watch the game in action on YouTube: [Your YouTube Link](https://www.youtube.com/your-youtube-video-link)
+
+---
+
+Enjoy playing Rock Paper Scissors with your computer! If you have any questions or issues, feel free to create an issue in the GitHub repository, and we'll be happy to assist you. Happy gaming!
