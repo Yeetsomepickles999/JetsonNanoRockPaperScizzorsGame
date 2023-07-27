@@ -50,7 +50,10 @@ cd JetsonNanoRockPaperScizzorsGame
 
 Replace the `imagenet.py` file in the `jetson-inference/python/examples` directory with the provided version from this repository. This modified `imagenet.py` file contains the necessary modifications to fit the custom images for Rock, Paper, and Scissors gestures.
 
-4. Install Jetson Inference and Jetson Utils libraries:
+4. Upload the model.onnx file:
+Place the model.onnx file, which contains the fine-tuned ResNet-18 model, in the jetson-inference/python/examples directory. This file is essential for running the Rock Paper Scissors game.
+
+5. Install Jetson Inference and Jetson Utils libraries:
 
 For NVIDIA Jetson platforms, these libraries are essential for running the deep learning model and utilizing camera functionalities. Follow the steps below to install them:
 
