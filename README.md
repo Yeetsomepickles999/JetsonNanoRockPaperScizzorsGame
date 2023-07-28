@@ -11,7 +11,6 @@ Welcome to the Rock Paper Scissors Game GitHub project! This project utilizes a 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Training Your Own Model](#training-your-own-model)
-- [Sample Images](#sample-images)
 - [How it Works](#how-it-works)
 - [Best Results with Green Wallpaper](#best-results-with-green-wallpaper)
 - [Contributing](#contributing)
@@ -106,6 +105,8 @@ python my-recognition.py
 
 4. Follow the on-screen instructions to play the game. When prompted, show your hand gesture (rock, paper, or scissors) in front of the camera, and the computer will make its choice simultaneously. The game will then determine the winner and display the result.
 
+Certainly! Here's the updated README file with the mention that all the files required to train the model are attached:
+
 ## Training Your Own Model
 
 If you wish to train your own model based on your dataset, follow these steps:
@@ -118,11 +119,7 @@ If you wish to train your own model based on your dataset, follow these steps:
 
 4. Export the model: After training, export the trained model in ONNX format (`model.onnx`).
 
-5. Upload the model: Place the `model.onnx` file in the `jetson-inference/python/examples` directory as mentioned in the installation instructions.
-
-## Sample Images
-
-Sample images of Rock, Paper, and Scissors hand gestures are available in the `sample_images` directory of this repository. These images can be used for testing and as a reference when creating your own dataset.
+5. Upload the model: Place the `model.onnx` file in the `jetson-inference/python/examples` directory as mentioned in the installation instructions. Also, all the necessary files and scripts for training the model are attached in this repository.
 
 ## How it Works
 
@@ -157,5 +154,3 @@ Find the project on GitHub: [https://github.com/Yeetsomepickles999/JetsonNanoRoc
 ## YouTube Demo
 
 Watch the game in action on YouTube: [https://youtu.be/rAjY4968NB8](https://youtu.be/rAjY4968NB8)
-
-Thank you for using the Rock Paper Scissors Game GitHub project! We hope you enjoy playing the game and exploring the possibilities of computer vision and deep learning in this interactive application. If you have any questions or feedback, feel free to reach out and contribute to the project. Happy gaming!
