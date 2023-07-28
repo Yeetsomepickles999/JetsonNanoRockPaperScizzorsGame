@@ -32,6 +32,7 @@ parser = argparse.ArgumentParser()
 args = parser.parse_args()
 
 input = videoSource("/dev/video0", argv=sys.argv)
+#output = videoOutput("", argv=sys.argv)
 font = cudaFont()
 # Background
 # Paper
@@ -98,4 +99,5 @@ while True:
                 print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou Tie")
                 print("The computer played " + computer_move)
                 print("You played " + move)
+        #output.Render(img)
         time.sleep(1)
