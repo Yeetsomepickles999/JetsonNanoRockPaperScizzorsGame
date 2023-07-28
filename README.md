@@ -1,5 +1,3 @@
-Certainly! Here's the updated README file with the information stating that the project is unlicensed:
-
 # Rock Paper Scissors Game using Modified ImageNet and ResNet-18
 
 ![Rock Paper Scissors](https://www.nvidia.com/content/dam/en-zz/Solutions/intelligent-machines/embedded-systems/jetson-nano/nvidia-jetson-nano-og.jpg)
@@ -12,7 +10,10 @@ Welcome to the Rock Paper Scissors Game GitHub project! This project utilizes a 
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Training Your Own Model](#training-your-own-model)
+- [Sample Images](#sample-images)
 - [How it Works](#how-it-works)
+- [Best Results with Green Wallpaper](#best-results-with-green-wallpaper)
 - [Contributing](#contributing)
 - [GitHub Repository](#github-repository)
 - [YouTube Demo](#youtube-demo)
@@ -50,8 +51,9 @@ cd JetsonNanoRockPaperScizzorsGame
 
 Replace the `imagenet.py` file in the `jetson-inference/python/examples` directory with the provided version from this repository. This modified `imagenet.py` file contains the necessary modifications to fit the custom images for Rock, Paper, and Scissors gestures.
 
-4. Upload the model.onnx file:
-Place the model.onnx file, which contains the fine-tuned ResNet-18 model, in the jetson-inference/python/examples directory. This file is essential for running the Rock Paper Scissors game.
+4. Upload your trained model:
+
+Place your trained ResNet-18 model in ONNX format (`model.onnx`) in the `jetson-inference/python/examples` directory. As there is no given model in this repository, you will need to train your own model based on your dataset. See the [Training Your Own Model](#training-your-own-model) section for instructions on training your model.
 
 5. Install Jetson Inference and Jetson Utils libraries:
 
@@ -104,6 +106,24 @@ python my-recognition.py
 
 4. Follow the on-screen instructions to play the game. When prompted, show your hand gesture (rock, paper, or scissors) in front of the camera, and the computer will make its choice simultaneously. The game will then determine the winner and display the result.
 
+## Training Your Own Model
+
+If you wish to train your own model based on your dataset, follow these steps:
+
+1. Prepare your dataset: Create a dataset with images of Rock, Paper, and Scissors hand gestures. Organize the images into separate folders, with each folder representing a different gesture.
+
+2. Modify `imagenet.py`: Use the provided `imagenet.py` script in this repository as a starting point. Modify it to load your custom dataset and fine-tune the ResNet-18 model.
+
+3. Train the model: Use the modified `imagenet.py` script to train the model on your dataset. Fine-tune the ResNet-18 model with the images of Rock, Paper, and Scissors.
+
+4. Export the model: After training, export the trained model in ONNX format (`model.onnx`).
+
+5. Upload the model: Place the `model.onnx` file in the `jetson-inference/python/examples` directory as mentioned in the installation instructions.
+
+## Sample Images
+
+Sample images of Rock, Paper, and Scissors hand gestures are available in the `sample_images` directory of this repository. These images can be used for testing and as a reference when creating your own dataset.
+
 ## How it Works
 
 The Rock Paper Scissors Game uses the modified ImageNet dataset, which includes images of Rock, Paper, and Scissors hand gestures. These images were used to fine-tune the ResNet-18 deep learning model specifically for the Rock Paper Scissors game.
@@ -111,6 +131,10 @@ The Rock Paper Scissors Game uses the modified ImageNet dataset, which includes 
 During the game, the camera captures real-time video input. The program processes each frame, detects the hand gesture using the fine-tuned ResNet-18 model, and predicts the corresponding gesture.
 
 The game logic then determines the winner based on the traditional Rock Paper Scissors rules.
+
+## Best Results with Green Wallpaper
+
+For the best results and accurate hand gesture recognition, we recommend using a green wallpaper or green background behind your hand gesture during gameplay. The green color provides a high contrast against the skin tone, making it easier for the computer vision model to detect and recognize hand gestures effectively.
 
 ## Contributing
 
@@ -132,8 +156,6 @@ Find the project on GitHub: [https://github.com/Yeetsomepickles999/JetsonNanoRoc
 
 ## YouTube Demo
 
-Watch the game in action on YouTube: [Your YouTube Link](https://www.youtube.com/your-youtube-video-link)
+Watch the game in action on YouTube: [https://www.youtube.com/your-youtube-video-link](https://www.youtube.com/your-youtube-video-link)
 
----
-
-Enjoy playing Rock Paper Scissors with your computer! If you have any questions or issues, feel free to create an issue in the GitHub repository, and we'll be happy to assist you. Happy gaming!
+Thank you for using the Rock Paper Scissors Game GitHub project! We hope you enjoy playing the game and exploring the possibilities of computer vision and deep learning in this interactive application. If you have any questions or feedback, feel free to reach out and contribute to the project. Happy gaming!
