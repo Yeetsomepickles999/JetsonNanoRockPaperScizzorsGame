@@ -156,6 +156,6 @@ Find the project on GitHub: [https://github.com/Yeetsomepickles999/JetsonNanoRoc
 
 ## YouTube Demo
 
-Watch the game in action on YouTube: [https://www.youtube.com/your-youtube-video-link](https://www.youtube.com/your-youtube-video-link)
+Watch the game in action on YouTube: [https://youtu.be/rAjY4968NB8](https://youtu.be/rAjY4968NB8)
 
 Thank you for using the Rock Paper Scissors Game GitHub project! We hope you enjoy playing the game and exploring the possibilities of computer vision and deep learning in this interactive application. If you have any questions or feedback, feel free to reach out and contribute to the project. Happy gaming!
