@@ -105,21 +105,33 @@ python my-recognition.py
 
 4. Follow the on-screen instructions to play the game. When prompted, show your hand gesture (rock, paper, or scissors) in front of the camera, and the computer will make its choice simultaneously. The game will then determine the winner and display the result.
 
-Certainly! Here's the updated README file with the mention that all the files required to train the model are attached:
-
 ## Training Your Own Model
 
 If you wish to train your own model based on your dataset, follow these steps:
 
-1. Prepare your dataset: Create a dataset with images of Rock, Paper, and Scissors hand gestures. Organize the images into separate folders, with each folder representing a different gesture.
+1. Switch to the "master" branch: To access the necessary files and scripts for training the model, switch to the "master" branch of this repository.
 
-2. Modify `imagenet.py`: Use the provided `imagenet.py` script in this repository as a starting point. Modify it to load your custom dataset and fine-tune the ResNet-18 model.
+```bash
+git checkout master
+```
 
-3. Train the model: Use the modified `imagenet.py` script to train the model on your dataset. Fine-tune the ResNet-18 model with the images of Rock, Paper, and Scissors.
+2. Prepare your dataset: Create a dataset with images of Rock, Paper, and Scissors hand gestures. Organize the images into separate folders, with each folder representing a different gesture.
 
-4. Export the model: After training, export the trained model in ONNX format (`model.onnx`).
+3. Modify `imagenet.py`: Use the provided `imagenet.py` script in the `jetson-inference/python/examples` directory as a starting point. Modify it to load your custom dataset and fine-tune the ResNet-18 model.
 
-5. Upload the model: Place the `model.onnx` file in the `jetson-inference/python/examples` directory as mentioned in the installation instructions. Also, all the necessary files and scripts for training the model are attached in this repository.
+4. Train the model: Use the modified `imagenet.py` script to train the model on your dataset. Fine-tune the ResNet-18 model with the images of Rock, Paper, and Scissors.
+
+5. Export the model: After training, export the trained model in ONNX format (`model.onnx`).
+
+6. Upload the model: Place the `model.onnx` file in the `jetson-inference/python/examples` directory as mentioned in the installation instructions.
+
+## Sample Images
+
+Sample images of Rock, Paper, and Scissors hand gestures are available in the `sample_images` directory of this repository. These images can be used for testing and as a reference when creating your own dataset.
+
+...
+
+The rest of the README remains unchanged.
 
 ## How it Works
 
