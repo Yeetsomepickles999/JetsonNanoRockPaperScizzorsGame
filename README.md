@@ -125,14 +125,6 @@ git checkout master
 
 6. Upload the model: Place the `model.onnx` file in the `jetson-inference/python/examples` directory as mentioned in the installation instructions.
 
-## Sample Images
-
-Sample images of Rock, Paper, and Scissors hand gestures are available in the `sample_images` directory of this repository. These images can be used for testing and as a reference when creating your own dataset.
-
-...
-
-The rest of the README remains unchanged.
-
 ## How it Works
 
 The Rock Paper Scissors Game uses the modified ImageNet dataset, which includes images of Rock, Paper, and Scissors hand gestures. These images were used to fine-tune the ResNet-18 deep learning model specifically for the Rock Paper Scissors game.
@@ -165,4 +157,4 @@ Find the project on GitHub: [https://github.com/Yeetsomepickles999/JetsonNanoRoc
 
 ## YouTube Demo
 
-Watch the game in action on YouTube: [https://youtu.be/rAjY4968NB8](https://youtu.be/rAjY4968NB8)
+Watch the game in action on YouTube: [https://youtu.be/emMJ9Opf86Q](https://youtu.be/emMJ9Opf86Q)
