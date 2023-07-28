@@ -157,4 +157,5 @@ Find the project on GitHub: [https://github.com/Yeetsomepickles999/JetsonNanoRoc
 
 ## YouTube Demo
 
-Watch the game in action on YouTube: [https://youtu.be/emMJ9Opf86Q](https://youtu.be/emMJ9Opf86Q)
+Watch a description of the game on Youtube: [https://youtu.be/emMJ9Opf86Q](https://youtu.be/emMJ9Opf86Q)
+Watch the game in action on YouTube: [https://youtu.be/_7Gh36yrx5g](https://youtu.be/_7Gh36yrx5g)
